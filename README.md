@@ -1,10 +1,8 @@
 Submitted by:
   Sonjay Cimanes
   Mary Joy Monter
-  
 Subject: 
   ITBAN 2
-  
 
 1.1.SELECT name, description FROM products;
 ![Database Screenshot](https://github.com/Ryljoy2023/MySQL-ACTIVITY1/blob/b04d2612ebe76e208b54deaf49941b92cec0ab86/1.JPG)
@@ -33,7 +31,7 @@ Subject:
 5.1.SELECT p.name, SUM(od.quantity) AS total_quantity_sold FROM products p JOIN order_details od ON p.product_id = od.product_id GROUP BY p.name ORDER BY total_quantity_sold DESC LIMIT 5;
 ![Database Screenshot(408)](https://github.com/Ryljoy2023/MySQL-ACTIVITY1/blob/3dab5f2a7453cdaaaaea85c45923ed908d0acc27/5.JPG)
 
-5.2.SELECT AVG(CAST(JSON_EXTRACT(attributes,'$.prize') AS DECIMAL)) AS avg_price FROM products WHERE JSON_EXTRACT(attributes,'$.brand') = 'Meyer Inc';
+5.2.SELECT AVG(CAST(JSON_EXTRACT(attributes,'$.prize') AS DECIMAL)) AS avg_price FROM products WHERE JSON_EXTRACT(attributes,'$.brand') = 'Weaver,Adams and Bruce';
 ![Database Screenshot (409)](https://github.com/Ryljoy2023/MySQL-ACTIVITY1/blob/3dab5f2a7453cdaaaaea85c45923ed908d0acc27/5.1.JPG)
 
 6.1.SELECT JSON_EXTRACT(attributes,'$.color') AS color, JSON_EXTRACT(attributes,'$.size') AS size FROM products WHERE product_id = 1;
