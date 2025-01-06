@@ -1,8 +1,10 @@
 Submitted by:
   Sonjay Cimanes
   Mary Joy Monter
+  
 Subject: 
   ITBAN 2
+  
 
 1.1.SELECT name, description FROM products;
 ![Database Screenshot](https://github.com/Ryljoy2023/MySQL-ACTIVITY1/blob/b04d2612ebe76e208b54deaf49941b92cec0ab86/1.JPG)
@@ -16,8 +18,8 @@ Subject:
 2.2.SELECT o.order_id, SUM(od.quantity * od.price) AS total_cost FROM orders o JOIN order_details od ON o.order_id = od.order_id GROUP BY o.order_id;
 ![Database Screenshott (403)](https://github.com/Ryljoy2023/MySQL-ACTIVITY1/blob/3dab5f2a7453cdaaaaea85c45923ed908d0acc27/2.1.JPG)
 
-3.1.SELECT * FROM products WHERE JSON_EXTRACT(attributes,'$.price') > 50;
-![Database Screenshot (404)](https://github.com/Ryljoy2023/MySQL-ACTIVITY1/blob/3dab5f2a7453cdaaaaea85c45923ed908d0acc27/3.1 CORRECT.JPG)
+3.1.SELECT name,JSON_EXTRACT(attributes,'$.price') FROM products WHERE JSON_EXTRACT(attributes,'$.price') > 50;
+![Database Screenshot (404)](https://github.com/Ryljoy2023/MySQL-ACTIVITY1/blob/3dab5f2a7453cdaaaaea85c45923ed908d0acc27/3.1%20CORRECT.JPG)
 
 3.2.SELECT name, JSON_EXTRACT(attributes,'$.price') AS price FROM products JSON_EXTRACT(attributes,'$.color') = 'Hotpink' AND JSON_EXTRACT(attributes,'$.brand') = 'Holt Group';
 ![Database Screenshot (405)](https://github.com/Ryljoy2023/MySQL-ACTIVITY1/blob/3dab5f2a7453cdaaaaea85c45923ed908d0acc27/3.2.JPG)
@@ -48,7 +50,7 @@ Subject:
 
 8.1.UPDATE products SET attributes = JSON_SET(attributes, '$.price', '61') WHERE product_id = 1;
 ![Databas Screenshot (414)](https://github.com/Ryljoy2023/MySQL-ACTIVITY1/blob/3dab5f2a7453cdaaaaea85c45923ed908d0acc27/8.JPG)
-![Databas Screenshot (415)](https://github.com/Ryljoy2023/MySQL-ACTIVITY1/blob/3dab5f2a7453cdaaaaea85c45923ed908d0acc27/8continue.JPG)
+![Databas Screenshot (415)](https://github.com/Ryljoy2023/MySQL-ACTIVITY1/blob/3dab5f2a7453cdaaaaea85c45923ed908d0acc27/8%20continue.JPG)
 
 8.2.UPDATE products SET attributes = JSON_SET(attributes, '$.bagong_COlumn ', 'mao_NANI');
 ![Databas Screenshot (416)](https://github.com/Ryljoy2023/MySQL-ACTIVITY1/blob/3dab5f2a7453cdaaaaea85c45923ed908d0acc27/8.2.JPG)
@@ -58,3 +60,9 @@ Subject:
 
 9.2. SELECT JSON_EXTRACT(attributes, '$.color[0]') AS first_feature FROM products;
 ![Databas Screenshot (418)](https://github.com/Ryljoy2023/MySQL-ACTIVITY1/blob/3dab5f2a7453cdaaaaea85c45923ed908d0acc27/9.1.JPG)
+
+
+
+
+
+
